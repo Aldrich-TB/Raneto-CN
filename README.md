@@ -6,31 +6,33 @@ Raneto [![Node.js CI](https://github.com/ryanlelek/Raneto/actions/workflows/node
 [Raneto](https://raneto.com) is a free, open, simple Markdown powered knowledge base for Node.js.
 [Find out more &rarr;](https://docs.raneto.com/what-is-raneto)
 
-Important Updates
+Important Updates From Raneto
 -----------------
 
-- **Please ensure you're on Raneto v0.17.1 for the latest security fixes**
-- Join the [Roadmap Discussion](https://github.com/ryanlelek/Raneto/issues/374)
+- Update lunr.zh.js
+```
+  cd Raneto-CN
+  npm install
+ ```
+- Make sure nodejieba installed.
+- Replace default lunr.zh.js .
 
-Demo and Documentation
-----------------------
-
-Visit [https://docs.raneto.com](https://docs.raneto.com) to see a demo.  
+`mv lunr.zh.js node_moudules/lunr-languages/lunr.zh.js`
 
 Quickstart
 ----------
 
-Visit the [Example Repo](https://github.com/raneto/example)  
-See the [installation guide](https://docs.raneto.com/install/installing-raneto) for more information.  
+Visit the [Example Repo](https://github.com/raneto/example)
+See the [installation guide](https://docs.raneto.com/install/installing-raneto) for more information.
 
 Docker / Containers
 -------------------
-Official Raneto container images on [Docker Hub](https://hub.docker.com/r/raneto/raneto/tags)  
+Official Raneto container images on [Docker Hub](https://hub.docker.com/r/raneto/raneto/tags)
 
-Run the default container, and access on [localhost:3000](http://localhost:3000)  
+Run the default container, and access on [localhost:3000](http://localhost:3000)
 `docker run --rm -it --publish 3000:3000 raneto/raneto:latest`
 
-Same as above, but provide your own content and configuration  
+Same as above, but provide your own content and configuration
 ```
 docker run --rm -it --publish 3000:3000 \
   --volume \
@@ -38,12 +40,12 @@ docker run --rm -it --publish 3000:3000 \
   raneto/raneto:latest
 ```
 
-Want to poke around the files in the container? Get a shell:  
+Want to poke around the files in the container? Get a shell:
 `docker run --rm -it --publish 3000:3000 --volume raneto/raneto:latest /bin/sh`
 
 Security
 --------
-Make sure you edit the default username and password in your `config.js` file.  
+Make sure you edit the default username and password in your `config.js` file.
 ```
 ##### WARNING #####
 // You MUST change the username and password for security
@@ -57,7 +59,7 @@ Make sure you edit the default username and password in your `config.js` file.
 
 Markdown Reference
 ------------------
-If you want to embed links and images, you'll need to use the Markdown syntax.  
+If you want to embed links and images, you'll need to use the Markdown syntax.
 [See this Markdown Guide](https://www.markdownguide.org/cheat-sheet)
 
 Links
